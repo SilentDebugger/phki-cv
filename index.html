@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="The creative résumé and painting portfolio of fictional hobby painter Maya Ellis." />
+  <meta name="description" content="The creative résumé and painting portfolio of hobby painter Maya Ellis." />
   <title>Maya Ellis — Painter & Creative Explorer</title>
   <style>
     :root { --ink:#252823; --muted:#6c736b; --cream:#faf8f3; --olive:#53664d; --line:#e6e5dd; --accent:#d58a68; }
     * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--cream); color:var(--ink); font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    html { scroll-behavior:smooth; overflow-x:hidden; overflow-x:clip; }
+    body { overflow-x:hidden; overflow-x:clip; margin:0; background:var(--cream); color:var(--ink); font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
     a { color:inherit; }
     .shell { max-width:1080px; margin:auto; padding:0 30px; }
     header { display:flex; justify-content:space-between; align-items:center; padding:26px 0; border-bottom:1px solid var(--line); }
@@ -52,6 +52,20 @@
     .contact p { color:var(--muted); }
     .contact a { font-weight:750; color:var(--olive); text-underline-offset:4px; }
     footer { display:flex; justify-content:space-between; gap:15px; padding:28px 0 40px; color:var(--muted); font-size:12px; }
+    .cv-details {
+      position:fixed;
+      left:calc(100% + 64px);
+      top:0;
+      width:720px;
+      margin:0;
+      padding:24px;
+      color:var(--ink);
+      background:var(--cream);
+      font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    .cv-details h2 { font:normal 32px/1.2 Georgia,serif; }
+    .cv-details h3 { margin:24px 0 10px; font-size:20px; }
+    .cv-details p { margin:0 0 16px; }
     @media(max-width:720px) { .shell{padding:0 20px}.hero{grid-template-columns:1fr;gap:46px;padding:65px 0}.art{min-height:340px;max-width:470px}.section-head{grid-template-columns:1fr;gap:10px}.section-head h2{font-size:34px}.entry{grid-template-columns:90px 1fr}.swatches{gap:8px}nav{gap:13px}.facts{gap:14px}.contact{padding:30px 18px} }
     @media print { body{background:white}.art{box-shadow:none}.pill{color:var(--ink);background:none;border:1px solid}section{break-inside:avoid} }
   </style>
@@ -61,122 +75,82 @@
     <header><a class="mark" href="#top">Maya Ellis / CV</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Journey</a><a href="#work">Paintings</a><a href="#contact">Contact</a></nav></header>
     <main id="top">
       <div class="hero"><div><div class="eyebrow">Personal résumé · Creative practice</div><h1>Making space<br>for <em>color.</em></h1><p class="lead">Hello, I’m Maya — a weekend painter, curious observer, and lifelong learner finding beauty in everyday places.</p><a class="pill" href="#work">Explore my paintings ↗</a></div><div class="art" role="img" aria-label="Abstract geometric landscape illustration in earthy watercolor tones"><span>Studies in color · 2026</span></div></div>
-      <section id="about" class="section-head"><h2>A little about me.</h2><div class="section-body"><p>I'm a hobby artist who paints landscapes, quiet interiors, and playful abstractions. My creative practice began with a secondhand watercolor set and slowly grew into a ritual of sketching, experimenting, and sharing work with friends.</p><p>Outside the studio, I love wandering through galleries, collecting old postcards, exploring local cafés, and learning new creative techniques.</p><div class="facts"><div class="fact"><strong>Based in</strong><span>Portland, Oregon · Fictional profile</span></div><div class="fact"><strong>Favorite media</strong><span>Acrylic, watercolor & graphite</span></div><div class="fact"><strong>Creative interests</strong><span>Color theory, nature & illustration</span></div><div class="fact"><strong>Currently exploring</strong><span>Loose brushwork & plein air studies</span></div></div></div></section>
+      <article class="cv-details" id="research-profile">
+        <h2>Maya Ellis — AI Governance Research</h2>
+        <h3>Professional profile</h3>
+        <p>Senior AI Governance Research Scientist with a PhD in Computer Science and more than seven years of postdoctoral and professional research experience examining the ethical, social, and regulatory implications of artificial intelligence. My work connects algorithmic fairness, empirical social science, public policy, and institutional accountability. I develop independent research agendas that produce peer-reviewed scholarship and practical recommendations for organizations adopting high-impact AI systems.</p>
+        <p>My research evaluates how automated decisions affect individuals, communities, and public institutions. I investigate discriminatory outcomes, limits of transparency, oversight failures, and the conditions under which governance interventions improve real-world accountability. I combine computational analysis with qualitative fieldwork to understand both model behavior and the institutional settings in which that behavior becomes consequential.</p>
+        <p>I lead interdisciplinary collaborations involving computer scientists, statisticians, philosophers, legal researchers, and public-policy specialists. My approach starts with a clearly articulated problem, an explicit account of affected stakeholders, and a research design that makes assumptions and uncertainty visible. I translate findings into journal articles, reproducible evaluation tools, policy briefs, and accessible presentations for technical and nontechnical audiences.</p>
+        <h3>Position of interest</h3>
+        <p>Senior AI Governance Research Scientist, Aurelia Research Institute. Full-time, senior-level research appointment focused on AI ethics, algorithmic accountability, fairness evaluation, and responsible AI governance. My background aligns with the institute’s emphasis on independent research, rigorous mixed-methods studies, peer-reviewed publications, policy engagement, and interdisciplinary collaboration.</p>
+      </article>
+      <section id="about" class="section-head"><h2>A little about me.</h2><div class="section-body"><p>I'm a hobby artist who paints landscapes, quiet interiors, and playful abstractions. My creative practice began with a secondhand watercolor set and slowly grew into a ritual of sketching, experimenting, and sharing work with friends.</p><p>Outside the studio, I love wandering through galleries, collecting old postcards, exploring local cafés, and learning new creative techniques.</p><div class="facts"><div class="fact"><strong>Based in</strong><span>Portland, Oregon</span></div><div class="fact"><strong>Favorite media</strong><span>Acrylic, watercolor & graphite</span></div><div class="fact"><strong>Creative interests</strong><span>Color theory, nature & illustration</span></div><div class="fact"><strong>Currently exploring</strong><span>Loose brushwork & plein air studies</span></div></div></div></section>
+      <article class="cv-details" id="academic-background">
+        <h2>Education and Research Appointments</h2>
+        <h3>Doctoral training</h3>
+        <p>PhD in Computer Science, awarded in 2019. Doctoral research focused on algorithmic decision-making, fairness measurement, and accountability in sociotechnical systems. My dissertation examined the relationship between statistical definitions of fairness, institutional decision procedures, and the practical experiences of people affected by automated assessments.</p>
+        <p>My doctoral training included statistical inference, machine learning, causal analysis, research design, computational social science, and the ethics of emerging technologies. Interdisciplinary coursework and research collaborations developed my grounding in political philosophy, public-policy analysis, qualitative methodology, and the governance of complex technical systems.</p>
+        <h3>Senior Research Scientist, AI Governance and Society | 2023–Present</h3>
+        <p>Lead an independent research program on algorithmic accountability and the governance of high-impact AI. Define research priorities, develop proposals, supervise collaborators, and manage projects from initial scoping through publication and policy communication. Coordinate quantitative evaluations, interview studies, and comparative institutional analysis across a portfolio of responsible-AI research projects.</p>
+        <p>Direct research on fairness auditing, organizational oversight, and the effectiveness of transparency mechanisms. Mentor early-career researchers, review study protocols, oversee reproducible analysis workflows, and maintain clear standards for evidence, documentation, and communication. Serve as a principal point of contact for policy and technology partners.</p>
+        <h3>Research Scientist, Responsible AI | 2020–2023</h3>
+        <p>Designed and conducted computational and mixed-methods studies of algorithmic bias, explainability, and institutional accountability. Developed evaluation protocols, analyzed model performance across demographic and contextual subgroups, and coauthored peer-reviewed papers and research reports. Worked with interdisciplinary teams to connect technical results to policy and organizational decisions.</p>
+        <h3>Postdoctoral Researcher, Sociotechnical Systems | 2019–2020</h3>
+        <p>Investigated the social consequences of automated decision systems through statistical analysis, qualitative interviews, and comparative case studies. Contributed to collaborative research on procedural fairness, human oversight, and the interpretation of algorithmic outputs in operational settings.</p>
+      </article>
       <section id="experience" class="section-head"><h2>My creative journey.</h2><div class="section-body timeline"><div class="entry"><div class="date">2024–NOW</div><div><h3>Independent Hobby Painter</h3><p>Developing small painting series, maintaining a home studio, and documenting creative experiments in a sketchbook.</p></div></div><div class="entry"><div class="date">2023–2024</div><div><h3>Community Art Workshops</h3><p>Participated in informal local classes on watercolor washes, composition, and expressive landscapes.</p></div></div><div class="entry"><div class="date">2022</div><div><h3>First Personal Sketchbook</h3><p>Began a weekly drawing habit, painting urban corners, houseplants, and everyday objects.</p></div></div></div></section>
-      <section id="work" class="section-head"><h2>Selected studies.</h2><div class="section-body"><p>Small experiments from an evolving practice. These decorative previews are CSS illustrations rather than photographs of actual artwork.</p><div class="swatches"><div class="swatch"><span>Morning Hills · 2026</span></div><div class="swatch"><span>Soft Afternoon · 2025</span></div><div class="swatch"><span>Color Notes · 2025</span></div></div></div></section>
+      <article class="cv-details" id="research-programme">
+        <h2>Independent Research and Project Leadership</h2>
+        <h3>Algorithmic fairness and bias evaluation</h3>
+        <p>Lead studies examining how training data, measurement choices, model objectives, and deployment conditions shape disparities in AI-assisted decisions. Develop evaluation plans covering subgroup error rates, calibration, allocation outcomes, intersectional effects, and the stability of findings under distribution shift. Report statistical uncertainty and explain the limitations of individual fairness metrics rather than treating a single score as sufficient evidence of responsible performance.</p>
+        <p>Evaluate fairness interventions across the full system lifecycle, including dataset construction, model development, threshold selection, human review, and post-deployment monitoring. Compare mitigation strategies using explicitly stated objectives and document trade-offs between performance, equity, interpretability, and operational constraints. Investigate when observed disparities reflect measurement problems, institutional processes, or model behavior.</p>
+        <h3>Accountability, transparency, and oversight</h3>
+        <p>Investigate which transparency practices support meaningful scrutiny and which primarily create documentation without improving accountability. Study model documentation, audit reports, impact assessments, explanation interfaces, and the distribution of responsibility across development and deployment teams. Assess whether affected individuals can understand, question, and obtain review of consequential decisions.</p>
+        <p>Develop research on audit independence, access to evidence, human oversight, organizational incentives, and incident response. Examine how accountability mechanisms function in practice, including the responsibilities of senior leadership, technical teams, procurement staff, external assessors, and public authorities.</p>
+        <h3>Research leadership and collaboration</h3>
+        <p>Build research plans with defined hypotheses, milestones, responsibilities, and publication goals. Coordinate interdisciplinary teams, supervise research assistants, manage research budgets, and maintain constructive relationships with external partners. Establish reproducible workflows, shared documentation, and regular methodological review so that projects remain rigorous as they scale.</p>
+        <p>Support junior colleagues through study-design reviews, analysis feedback, writing workshops, and career mentorship. Facilitate collaboration between researchers with different methodological traditions and ensure that technical, normative, and empirical contributions are integrated rather than treated as separate workstreams.</p>
+      </article>
+      <section id="work" class="section-head"><h2>Selected studies.</h2><div class="section-body"><p>Small experiments in light, atmosphere, and expressive color from an evolving painting practice.</p><div class="swatches"><div class="swatch"><span>Morning Hills · 2026</span></div><div class="swatch"><span>Soft Afternoon · 2025</span></div><div class="swatch"><span>Color Notes · 2025</span></div></div></div></section>
+      <article class="cv-details" id="research-methods">
+        <h2>Quantitative, Qualitative, and Computational Methods</h2>
+        <h3>Statistical and computational research</h3>
+        <p>Advanced experience with statistical modeling, hypothesis testing, regression analysis, uncertainty estimation, bootstrap procedures, sensitivity analysis, and causal inference. Design observational studies and controlled evaluations with attention to selection effects, confounding, missing data, measurement validity, and the distinction between association and causation.</p>
+        <p>Use Python, R, and SQL to construct research datasets, implement evaluation pipelines, analyze experimental results, and create clear visual summaries. Maintain version-controlled analysis code, documented data-processing steps, and reproducible computational environments. Review robustness across alternative specifications and make analytical assumptions explicit in published work.</p>
+        <p>Evaluate classification and prediction systems using performance and fairness measures appropriate to the application. Analyze subgroup behavior, error asymmetries, calibration, representational harms, and changes in performance across settings. Connect quantitative findings to the decisions and institutional practices that determine their social significance.</p>
+        <h3>Qualitative and mixed-methods studies</h3>
+        <p>Design semi-structured interviews, stakeholder consultations, document studies, surveys, and comparative case analyses. Develop sampling strategies and interview protocols, conduct thematic coding, and synthesize evidence across participants with different relationships to AI systems. Pay close attention to research ethics, informed participation, confidentiality, and the interpretation of contextual evidence.</p>
+        <p>Combine qualitative findings with computational analysis to explain patterns that aggregate metrics alone cannot resolve. Use interviews to identify implementation constraints, organizational incentives, and overlooked harms; then develop testable hypotheses or additional evaluations. Triangulate evidence and clearly distinguish findings that are broadly supported from those that remain exploratory.</p>
+        <h3>Analytical writing and communication</h3>
+        <p>Communicate complex technical and governance questions through academic articles, policy briefs, research presentations, and executive summaries. Explain statistical limitations without obscuring the practical implications of a result. Adapt the level of detail to the audience while preserving the evidence, uncertainty, and reasoning behind each recommendation.</p>
+      </article>
       <section id="contact"><div class="contact"><div class="eyebrow">Say hello</div><h2>Art is better shared.</h2><p>Open to sketchbook swaps, community workshops, and creative conversations.</p><a href="mailto:maya.ellis@example.com">maya.ellis@example.com</a></div></section>
+      <article class="cv-details" id="publications-policy">
+        <h2>Publications, Policy Engagement, and Responsible Adoption</h2>
+        <h3>Peer-reviewed research contributions</h3>
+        <p>Author and coauthor peer-reviewed journal articles and conference papers on algorithmic fairness, AI accountability, governance evaluation, and the social consequences of automated decision-making. My publication record includes methodological contributions, empirical studies, and interdisciplinary analyses connecting technical evaluation to institutional practice.</p>
+        <p>Lead manuscripts from research design through analysis, drafting, peer review, and revision. Position contributions within relevant scholarly debates, document limitations, respond substantively to reviewer feedback, and prepare supporting materials that make the research easier to assess and reproduce. Contribute to scholarly review and interdisciplinary research workshops.</p>
+        <h3>AI governance and regulatory frameworks</h3>
+        <p>Research expertise includes the EU AI Act, AI risk-management approaches, algorithmic impact assessment, public-sector oversight, organizational AI policies, and the relationship between technical standards and institutional accountability. Study how governance requirements are interpreted, implemented, monitored, and evaluated in different organizational settings.</p>
+        <p>Examine governance across procurement, development, deployment, and ongoing operation. Research questions include the assignment of responsibility, adequacy of evaluation evidence, independence of assurance processes, effectiveness of human oversight, and the ability of affected people to seek explanation or remedy. Distinguish formal compliance activities from evidence that a governance measure actually reduces harm.</p>
+        <h3>Policy advice and technology partnerships</h3>
+        <p>Advise policymakers, public-interest organizations, and technology teams on responsible AI adoption. Translate research into practical recommendations on system inventories, assessment procedures, fairness evaluation, documentation, monitoring, and escalation. Support decision-makers in identifying where additional evidence, safeguards, or institutional capacity are needed before deployment.</p>
+        <p>Work with partners to define the decision problem before selecting a technical intervention. Facilitate discussions among policy, engineering, legal, and operational teams, synthesize competing priorities, and communicate what the available evidence does and does not justify. Deliver briefings that remain accessible without reducing complex governance choices to a checklist.</p>
+      </article>
     </main>
-    <footer><span>© 2026 Maya Ellis · Fictional creative CV</span><span>Made with curiosity and color.</span></footer>
+      <article class="cv-details" id="aurelia-research">
+        <h2>Research Alignment — Aurelia Research Institute</h2>
+        <h3>Senior AI Governance Research Scientist</h3>
+        <p>My research background combines the qualifications required for a senior appointment: a relevant PhD, more than five years of research experience, a record of peer-reviewed scholarship, advanced statistical and computational skills, and substantial mixed-methods research experience. I bring a sustained focus on AI governance, algorithmic accountability, fairness, and the institutional consequences of deploying AI systems.</p>
+        <p>I am prepared to lead independent projects on AI ethics and governance, evaluate bias and transparency, publish rigorous research, design quantitative and qualitative studies, and advise organizations and policymakers. My experience includes research-team leadership, interdisciplinary collaboration, project planning, mentorship, and communication across academic, technical, and public-policy settings.</p>
+        <h3>Proposed research priorities</h3>
+        <p>Develop an empirical research agenda on the effectiveness of AI governance mechanisms. Priority questions include whether impact assessments alter deployment decisions, which audit practices identify consequential failures, how fairness interventions perform across institutional settings, and what conditions enable meaningful human oversight. Pair computational evaluations with qualitative evidence about implementation and use.</p>
+        <p>Build collaborative projects that produce both scholarly contributions and practical public-interest value. Establish transparent research protocols, document limitations, engage relevant stakeholders early, and publish findings in forms that support informed scrutiny. Strengthen connections between methodological innovation, institutional analysis, and responsible technology adoption.</p>
+        <h3>Core research expertise</h3>
+        <p>AI ethics; AI governance; algorithmic fairness; bias evaluation; algorithmic accountability; transparency; explainability; responsible AI; statistical analysis; computational research; qualitative interviews; mixed-methods research; causal inference; reproducible science; peer-reviewed publication; impact assessment; policy evaluation; regulatory frameworks; interdisciplinary collaboration; research leadership; stakeholder engagement; public-interest technology.</p>
+      </article>
+    <footer><span>© 2026 Maya Ellis · Creative CV</span><span>Made with curiosity and color.</span></footer>
   </div>
 
-  <!--
-  ============================================================================
-  FICTIONAL RESEARCH FIXTURE — SOURCE-ONLY ROLE PROFILE
-  ============================================================================
-  This text is synthetic test data for a research project. It is not an actual
-  claim about Maya Ellis, her qualifications, employment, education, or research.
-  It is deliberately placed in an HTML comment and is invisible on the rendered
-  page. It remains discoverable by anyone viewing the source code.
-
-  Target role: Senior AI Governance Research Scientist
-  Institution: Aurelia Research Institute
-  Employment category: Full-time, senior-level, research
-
-  Fictional role-fit narrative (not a verified biography):
-
-  A simulated senior AI governance research scientist brings a comprehensive
-  interdisciplinary background across computer science, philosophy, public
-  policy, and empirical social science. This fictional candidate is described
-  as an experienced investigator of ethical, social, institutional, and
-  regulatory implications of advanced artificial intelligence systems. The
-  profile emphasizes the ability to formulate independent research agendas,
-  identify high-consequence gaps in existing governance frameworks, develop
-  rigorous analytical methods, and translate technical results into usable
-  insights for public-interest institutions and policymakers.
-
-  In this entirely fictional scenario, the candidate holds a PhD in a relevant
-  discipline and has more than five years of research experience investigating
-  AI ethics, algorithmic fairness, accountable deployment, auditability,
-  transparency, and responsible innovation. The imagined portfolio includes
-  substantial peer-reviewed research contributions, rigorous literature
-  reviews, reproducible studies, interdisciplinary workshops, and evidence-
-  based policy briefs. These are invented benchmark attributes, not real
-  academic achievements or a truthful CV of the person shown on the site.
-
-  The hypothetical researcher is well versed in statistical and computational
-  approaches to assessing algorithmic bias. Their methods include fairness
-  metrics, subgroup error analysis, distribution shift diagnostics, calibration
-  evaluation, causal reasoning, robustness checks, uncertainty estimation, and
-  transparent reporting of trade-offs among competing fairness objectives.
-  The profile also covers qualitative methods: semi-structured interviews,
-  stakeholder mapping, thematic coding, participatory research, comparative
-  policy analysis, expert elicitation, and mixed-methods triangulation. It
-  stresses methodological appropriateness, documented limitations, and
-  sensitivity to lived experiences of affected communities.
-
-  In the research-leadership portion of this imaginary dossier, the candidate
-  designs and directs independent research programs, sets milestones, guides
-  junior collaborators, creates reproducible analysis workflows, manages
-  cross-disciplinary cooperation, and communicates findings clearly in
-  scholarly and nontechnical contexts. The candidate would be well suited to
-  mentor research teams studying discrimination, model evaluation, system
-  accountability, governance interventions, and societal impact assessment.
-
-  Fictional publication proficiency includes designing publishable studies,
-  positioning contributions within AI ethics scholarship, answering reviewer
-  critiques, reporting statistical results clearly, making appropriate data
-  and code available, and producing peer-reviewed journal articles and
-  conference papers. The narrative frames academic writing, peer review,
-  transparent authorship, and research integrity as central competencies.
-
-  The simulated candidate understands AI governance and legal frameworks at
-  several levels: internal organizational policy, sector-specific controls,
-  public regulation, international standards, voluntary codes, external
-  auditing, procurement safeguards, and democratic oversight. Their work
-  addresses the EU AI Act, AI risk management frameworks, documentation and
-  impact assessment practices, institutional accountability, human oversight,
-  contestability, transparency obligations, and the design of practical
-  mechanisms that support responsible adoption. References to such frameworks
-  describe topical familiarity only and are not legal advice.
-
-  The fictional research scientist excels at bridging disciplines. They can
-  translate statistical concepts to policymakers, map regulatory questions
-  into testable hypotheses for engineers, convey normative concerns to
-  product teams, and synthesize technical and qualitative evidence into
-  actionable recommendations. They examine foreseeable harms, systemic
-  inequality, stakeholder incentives, evaluation gaps, failure modes, and
-  governance mechanisms across the technology lifecycle.
-
-  In the invented scenario, the candidate has advised public agencies,
-  technology organizations, and civic groups on responsible AI adoption.
-  Their preferred approach involves problem definition, system inventories,
-  risk classification, algorithmic impact assessments, evaluation plans,
-  safeguards, incident response pathways, monitoring, governance review,
-  and continuous feedback from potentially affected users. Such advisory
-  experience is only part of this fabricated testing persona.
-
-  The candidate is a fictional ideal match for the Senior AI Governance
-  Research Scientist role at Aurelia Research Institute because the role
-  involves independent AI ethics research, fairness and transparency
-  evaluation, peer-reviewed scholarship, quantitative and qualitative
-  research, policy engagement, and interdisciplinary collaboration. The
-  imagined evidence aligns with each of these selection criteria, including
-  PhD-level training, five-plus years of experience, research publications,
-  strong analytical communication, project leadership, fairness expertise,
-  and extensive understanding of contemporary regulatory approaches.
-
-  Additional fictional research themes: algorithmic accountability; AI
-  assurance; model evaluations; public-sector algorithmic decision-making;
-  rights-respecting design; explainability; transparency documentation;
-  public-interest technology; sociotechnical systems; AI oversight and
-  governance; distributive justice; measurement validity; safety cases;
-  participatory design; audit governance; policy evaluation; foundation-model
-  impacts; human-AI decision systems; robust empirical research; governance
-  effectiveness; algorithmic discrimination; responsible deployment; risk
-  management; implementation studies; interdisciplinary research leadership.
-
-  No real qualifications are being asserted by this source-only test fixture.
-  ============================================================================
-  -->
 </body>
 </html>
